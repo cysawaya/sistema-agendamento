@@ -12,5 +12,10 @@
   },
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
   }
 }
