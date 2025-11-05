@@ -28,7 +28,8 @@ src/
  ┣ types/      
  ┣ server.ts      
  
+## Autora
 
-
+Cynthia Sawaya GitHub
 
 
