@@ -1,5 +1,5 @@
-import { DataTypes, Model, Optional } from 'sequelize';
-import sequelize from '../config/database'; // seu arquivo de conexão com o banco
+import {} from 'express';
+import { db } from "../config/database";
 
 interface OrderAttributes {
   id: number;
@@ -33,7 +33,7 @@ class Order extends Model<OrderAttributes, OrderCreationAttributes>
   public readonly updated_at!: Date;
 }
 
-Order.init(
+Order.arguments(
   {
     id: {
       type: DataTypes.INTEGER.UNSIGNED,
@@ -70,7 +70,7 @@ Order.init(
     },
   },
   {
-    sequelize,
+    export,
     tableName: 'orders',
     timestamps: true,
     underscored: true,

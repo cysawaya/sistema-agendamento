@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import Order from '../models/Order';
+import Order from '../models/orders';
 
 export default {
   async index(req: Request, res: Response) {
     try {
-      const orders = await Order.findAll();
-      res.json(orders);
+      const ordersController = await Order.arguments();
+      res.json(Order);
     } catch (error) {
       res.status(500).json({ error: 'Erro ao listar pagamentos' });
     }
@@ -15,7 +15,7 @@ export default {
     try {
       const { user_id, appointment_id, amount, payment_method } = req.body;
 
-      const order = await Order.create({
+      const order = await Order.caller({
         user_id,
         appointment_id,
         amount,
@@ -32,7 +32,7 @@ export default {
 
   async show(req: Request, res: Response) {
     try {
-      const order = await Order.findByPk(req.params.id);
+      const order = await Order.arguments(req.params.id);
       if (!order) return res.status(404).json({ error: 'Pagamento não encontrado' });
       res.json(order);
     } catch {
