@@ -1,32 +1,23 @@
 {
   "name": "sistema-agendamento",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^3.5.2"
   },
   "devDependencies": {
-    "@types/node": "^24.9.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.9.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cysawaya/sistema-agendamento.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cysawaya/sistema-agendamento/issues"
-  },
-  "homepage": "https://github.com/cysawaya/sistema-agendamento#readme"
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
 }
