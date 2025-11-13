@@ -6,7 +6,8 @@ Um serviço simples de agendamento desenvolvido em **TypeScript**, com integraç
 
 - Cadastro de usuários e serviços  
 - Criação, edição e exclusão de agendamentos  
-- Armazenamento dos dados em banco de dados  
+- Armazenamento dos dados em banco de dados
+- integraçao com o mercado pago
 
 ## Tecnologias Utilizadas
 
@@ -20,13 +21,13 @@ Um serviço simples de agendamento desenvolvido em **TypeScript**, com integraç
 src/
 
 
- ┣ server/       
+ ┣ config/       
  ┣ routers/       
  ┣ controllers/       
  ┣ models/      
  ┣ config/      
  ┣ types/      
- ┣ server.ts      
+ ┣ Middleware/      
  
 ## Autora
 
